@@ -11,7 +11,21 @@ addition.onclick = function(){
     const valueTwo=parseInt(snum.value);
     result.innerText=valueOne+valueTwo;
 }
-
+sub.onclick=function(){
+    const valueOne=parseInt(fnum.value);
+    const valueTwo=parseInt(snum.value);
+    result.innerText=valueOne-valueTwo;
+}
+mul.onclick=function(){
+    const valueOne=parseInt(fnum.value);
+    const valueTwo=parseInt(snum.value);
+    result.innerText=valueOne*valueTwo;
+}
+division.onclick=function(){
+    const valueOne=parseInt(fnum.value);
+    const valueTwo=parseInt(snum.value);
+    result.innerText=valueOne/valueTwo;
+}
 // <!-- <h1 id="result">0</h1>
 // <button id="plusButton">+</button>
 // <button id="minusButton">-</button> -->
