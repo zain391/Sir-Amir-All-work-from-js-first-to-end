@@ -14,6 +14,18 @@ let obj1={
     age:20,
 }
 console.log(obj1);
+// now i am going to create a new object by using the table format
+let obj2={
+    name:"hadi",
+    cgpa:3.50,
+    address:{
+        city:"jhang",
+        street:"shorkot wali",
+        district:"Fsd",
+    },
+    brotherNames:['hadi','secondOne',3,4]
+}
+console.table(obj2);
  
 
 
