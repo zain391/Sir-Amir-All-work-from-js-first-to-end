@@ -65,6 +65,9 @@ let arr4=[
 console.log(arr4);
 console.clear();
 // now we will see some kind a operations on string
+let str1=`i am a string`;
+console.log(str1);
+console.log(str1.length);
 
  
 

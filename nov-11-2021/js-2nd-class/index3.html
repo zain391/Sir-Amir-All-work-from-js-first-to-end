@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js getting ele</title>
+</head>
+
+<body>
+    <input type="text" id="adding" placeholder="enter name">
+    <button onclick="added()">add</button>
+    <!-- <button onclick="clear()">clear</button> -->
+    <h1 id="head"></h1>
+</body>
+<script>
+    let put = document.getElementById("adding");
+    let head = document.getElementById("head");
+    function added() {
+        let putValue = put.value;
+        let result = head.innerText = putValue;
+    }
+    
+</script>
+
+</html>
