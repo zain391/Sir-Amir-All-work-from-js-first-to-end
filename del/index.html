@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js del practice</title>
+</head>
+<body>
+    <h1 id="result">0</h1>
+    <input type="number" id="fNum">
+    <input type="number" id="sNum">
+    <button id="plus" onclick="plus()">+</button>
+    <button id="sub" onclick="sub()">-</button>
+    <button id="mul" onclick="mul()">*</button>
+    <button id="divd" onclick="divd()">/</button>
+
+</body>
+<script>
+  
+
+   var result=document.getElementById("result");
+   var fnum=document.getElementById("fNum");
+   var snum=document.getElementById("sNum");
+//    var plus=document.getElementById("plus");
+//    var sub=document.getElementById("sub");
+//    var mul=document.getElementById("mul");
+//    var divd=document.getElementById("divd");
+    function plus(){
+        const valueOne=parseInt(fnum.value);
+        const valueTwo=parseInt(snum.value);
+        result.innerText=valueOne+valueTwo;
+    };
+    function sub(){
+        const valueOne=parseInt(fnum.value);
+        const valueTwo=parseInt(snum.value);
+        result.innerText=valueOne-valueTwo;
+    };
+    function mul(){
+
+        const valueOne=parseInt(fnum.value);
+        const valueTwo=parseInt(snum.value);
+        result.innerText=valueOne*valueTwo;
+    };
+    function divd(){
+
+        const valueOne=parseInt(fnum.value);
+        const valueTwo=parseInt(snum.value);
+        result.innerText=valueOne/valueTwo;
+    };
+
+  
+</script>
+</html>

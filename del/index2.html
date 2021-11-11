@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js add event listner</title>
+</head>
+<body>
+    <h1 id="result">0</h1>
+    <input type="number" id="fNum">
+    <input type="number" id="sNum">
+    <!-- <button id="plus" onclick="plus()">+</button> -->
+    <!-- <button id="sub" onclick="sub()">-</button> -->
+    <!-- <button id="mul" onclick="mul()">*</button> -->
+    <!-- <button id="divd" onclick="divd()">/</button> -->
+    
+    <button id="plus">+</button>
+    <button id="sub" >-</button>
+    <button id="mul" >*</button>
+    <button id="divd">/</button>
+    
+</body>
+<script>
+    
+    let result=document.getElementById("result");
+    let fNum=document.getElementById("fNum");
+    let sNum=document.getElementById("sNum");
+    let plus=document.getElementById("plus");
+    let sub=document.getElementById("sub");
+    let mul=document.getElementById("mul");
+    let divd=document.getElementById("divd");
+    plus.addEventListener("click",function(){
+        const valueOne=parseInt(fNum.value);
+        const valueTwo=parseInt(sNum.value);
+        result.innerText=valueOne+valueTwo;
+    });
+    sub.addEventListener("click",function(){
+     const valueOne=parseInt(fNum.value);
+    const valueTwo=parseInt(sNum.value);
+    result.innerText=valueOne-valueTwo;
+    });
+    mul.addEventListener("click",function(){
+     const valueOne=parseInt(fNum.value);
+    const valueTwo=parseInt(sNum.value);
+    result.innerText=valueOne*valueTwo;
+    });
+    divd.addEventListener("click",function(){
+     const valueOne=parseInt(fNum.value);
+    const valueTwo=parseInt(sNum.value);
+    result.innerText=valueOne/valueTwo;
+    });
+</script>
+</html>
