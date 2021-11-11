@@ -26,6 +26,46 @@ let obj2={
     brotherNames:['hadi','secondOne',3,4]
 }
 console.table(obj2);
+console.clear();
+// now i am going to create an array of int type
+let arr1=[1,2,3,4,5,6,7];
+console.log(arr1);
+// now we will create an array of strings
+let arr2=['zain','hadi','Ali','Haroon'];
+console.log(arr2);
+// now we will create an array of stringd as well as of numbers
+let arr3;
+arr3=['zain',20,'hadi',20,'Ali',21,"haroon",19];
+console.log(arr3);
+// now we will create a list of objects in an array
+let arr4=[
+    {
+        name:"zain",
+        age:20
+    },
+    {
+        name:'hadi',
+        age:20
+    },
+    {
+        name:"haroon",
+        age:19
+    },
+    // now we will create an object inside an obj
+    {
+        cityList:"names of citis of pak",
+        names:
+        {
+            firstCity:"Fsd",
+            secCity:"Isl"
+        }
+    }
+
+];
+console.log(arr4);
+console.clear();
+// now we will see some kind a operations on string
+
  
 
 
