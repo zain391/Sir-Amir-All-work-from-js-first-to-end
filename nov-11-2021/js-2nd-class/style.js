@@ -7,6 +7,13 @@
     console.clear();
  });
 //  i am going to create an object
+let obj1={
+    name:"zain",
+    class:"BS Information Technology",
+    grade:"A+",
+    age:20,
+}
+console.log(obj1);
  
 
 
