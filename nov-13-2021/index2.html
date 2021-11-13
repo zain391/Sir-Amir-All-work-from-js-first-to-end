@@ -10,6 +10,14 @@
     
 </body>
 <script>
+    function test(){
+        const a=3;
+        if(true){
+            const a=8;
+            console.log(a);
+        }
+        console.log(a);
+    }
     const a= 3;
     // at this time the const is a globel variable
     function test1(){
@@ -21,5 +29,9 @@
     function test3(){     
         console.log(a);
     }
+    test();
+    // test1();
+    // test2();
+    // test3();
 </script>
 </html>
