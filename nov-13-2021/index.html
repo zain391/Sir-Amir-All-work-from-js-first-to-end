@@ -7,11 +7,13 @@
     <title>js loops and conditions</title>
 </head>
 <body>
-    <h2 id="result"></h2>    
+    
+    <h2 id="result"></h2>
 </body>
 <script>
-const result=document.getElementById("result");
-const temp=15;
+// const result=document.getElementById("result");
+const temp=45;
+
 
 // if keyword
 // if(temp < 20){
@@ -23,13 +25,30 @@ const temp=15;
 // if(temp < 30){
 //     result.innerText="please wear a t-shirt before going outside";
 // }
-// this was the code
+// this was the first code
+
+
+
+// if(temp < 20){
+//     result.innerText="please wear a jecket before going outside";
+// } else if(temp > 20 && temp <30){
+//     result.innerText="please wear normel t-shirt before going outside";
+// } else if(temp < 30){
+//     result.innerText="please wear a t-shirt before going outside";
+// }
+
+// this was the second code
+
 if(temp < 20){
     result.innerText="please wear a jecket before going outside";
 } else if(temp > 20 && temp <30){
     result.innerText="please wear normel t-shirt before going outside";
 } else if(temp < 30){
     result.innerText="please wear a t-shirt before going outside";
+}else{
+    result.innerText="<i>please wear whatever you want to</i> ";
+    // there is differnce between the html and text
+    // result.innerHTML="<i>please wear whatever you want to</i> ";
 }
 </script>
 </html>
