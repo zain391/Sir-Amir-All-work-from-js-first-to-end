@@ -7,28 +7,24 @@
     <title>js conditions practice</title>
 </head>
 <body>
-    <!-- first we will write a code make a function for wearing something by using the conditions  -->
-    <!-- first we will add a h2 tag for displayign the message -->
+    <input type="number" placeholder="Enter a Temperature" id="temp">
+    <button onclick="suggestions()">Get Suggestions</button>
     <h2 id="result"></h2>
 </body>
-<!-- now we will add a script tag -->
 <script>
-// now we will make a varible will be store the value of temperature
-const temp=40;
-// now we willget the h2 by id
+ function suggestions(){
+    let temp=parseInt(document.getElementById("temp").value);
     let result=document.getElementById("result");
-// now we will use the if conditions, the below line shows th syntax of if
-// if (condition) {
-    
-// }
-if(temp < 20){
-    result.innerText="Please wear a jacket";
-}
-else if(temp > 20 && temp <30){
-    result.innerText="please wear a normal t-shirt";
-}
-else if(temp > 30){
-    result.innerText="please wear whatever you want to";
-}
+    if(temp < 20){
+        result.innerText="please wear a jacket before going outside its below 20  outside";
+    }else if(temp >20 && temp <25){
+        result.innerText="please wear a t-shirt befor going outside its between 20 to 25 outside"
+    }else if(temp >25 && temp <31){
+        result.innerText="Please wear a normal t sirt its between 25 to 30 outside";
+    }else{
+        result.innerText="wear whatever you want to wear before going outside"
+    }
+
+ }
 </script>
 </html>
