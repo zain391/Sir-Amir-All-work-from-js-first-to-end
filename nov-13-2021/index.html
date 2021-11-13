@@ -9,10 +9,12 @@
 <body>
     
     <h2 id="result"></h2>
+    <input type="number"  id="tempInput" placeholder="Enter a temperature">
+    <button onclick="getResult()">Get Suggestions</button>
 </body>
 <script>
 // const result=document.getElementById("result");
-const temp=45;
+// const temp=45;
 
 
 // if keyword
@@ -39,16 +41,33 @@ const temp=45;
 
 // this was the second code
 
-if(temp < 20){
+// if(temp < 20){
+//     result.innerText="please wear a jecket before going outside";
+// } else if(temp > 20 && temp <30){
+//     result.innerText="please wear normel t-shirt before going outside";
+// } else if(temp < 30){
+//     result.innerText="please wear a t-shirt before going outside";
+// }else{
+    // result.innerText="<i>please wear whatever you want to</i> ";
+    // there is differnce between the html and text
+    // result.innerHTML="<i>please wear whatever you want to</i> ";
+// }
+
+// this was the third code
+
+function getResult(){
+    const temp=parseInt(document.getElementById("tempInput").value)
+    if(temp < 20){
     result.innerText="please wear a jecket before going outside";
 } else if(temp > 20 && temp <30){
     result.innerText="please wear normel t-shirt before going outside";
 } else if(temp < 30){
     result.innerText="please wear a t-shirt before going outside";
 }else{
-    result.innerText="<i>please wear whatever you want to</i> ";
+    result.innerText="please wear whatever you want to ";
     // there is differnce between the html and text
     // result.innerHTML="<i>please wear whatever you want to</i> ";
+}
 }
 </script>
 </html>
