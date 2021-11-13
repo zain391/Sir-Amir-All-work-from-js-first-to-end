@@ -17,10 +17,24 @@
     7-the for loop is controled by a variable at the backend of computer
     8-we basicaly apply that ending condition on the variable
     -->
-</body>
+    <form id="todoForm">
+    <input type="text"  id="todoInput">
+    <button type="submit">ADD</button>
+</form>
+<ul id="todos"></ul>
+</body> 
 <script>
-  for(let a=0; a < 10; a=a+1;){
-      console.log(a);     
-  }
+    const todos =[];
+ document
+ .getElementById("todoForm")
+ .addEventListener("submit",function (event){
+    event.preventDefault();
+    const todoInput=document.getElementById("todoInput").value;
+    todos.push(todoInput);
+    console.log(todos);
+    
+ })
+//  home work 
+// createelement by id
 </script>
 </html>
