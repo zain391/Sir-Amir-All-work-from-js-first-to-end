@@ -14,15 +14,22 @@ const result=document.getElementById("result");
 const temp=15;
 
 // if keyword
+// if(temp < 20){
+//     result.innerText="please wear a jecket before going outside";
+// }
+// if(temp > 20 && temp <30){
+//     result.innerText="please wear normel t-shirt before going outside";
+// }
+// if(temp < 30){
+//     result.innerText="please wear a t-shirt before going outside";
+// }
+// this was the code
 if(temp < 20){
     result.innerText="please wear a jecket before going outside";
-}
-if(temp > 20 && temp <30){
+} else if(temp > 20 && temp <30){
     result.innerText="please wear normel t-shirt before going outside";
-}
-if(temp < 30){
+} else if(temp < 30){
     result.innerText="please wear a t-shirt before going outside";
 }
-
 </script>
 </html>
