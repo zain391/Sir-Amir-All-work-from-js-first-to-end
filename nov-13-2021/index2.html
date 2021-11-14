@@ -45,13 +45,19 @@ const todos =[];
  .addEventListener("submit",function (event){
     event.preventDefault();
     const todoInput=document.getElementById("todoInput").value;
+    const todosList=document.getElementById("todos");
     todos.push(todoInput);
     console.log("Todos:",todos);
     for (let index = 0; index < todos.length; index++) {
-        const element = todos[index];
-        console.log(element);
+        const todo = todos[index];
+        console.log(todo);
+        // the below line waas added after the above code
+        const newListItem=document.createElement("li");
+        newListItem.innerText=todo;
+        todosList.appendChild(newListItem);
+        console.log(newListItem);
         
     }
- })
+ });
 </script>
 </html>
