@@ -39,25 +39,31 @@
 //  home work 
 // createelement by id
 
-const todos =[];
+let todos =[];
  document
  .getElementById("todoForm")
  .addEventListener("submit",function (event){
     event.preventDefault();
+    // todos=[];
     const todoInput=document.getElementById("todoInput").value;
     const todosList=document.getElementById("todos");
     todos.push(todoInput);
+    todosList.innerHTML="";
     console.log("Todos:",todos);
-    for (let index = 0; index < todos.length; index++) {
-        const todo = todos[index];
-        console.log(todo);
-        // the below line waas added after the above code
-        const newListItem=document.createElement("li");
-        newListItem.innerText=todo;
+    const newListItem=document.createElement("li");
+    newListItem.innerText=todoInput;
         todosList.appendChild(newListItem);
         console.log(newListItem);
+    // for (let index = 0; index < todos.length; index++) {
+    //     const todo = todos[index];
+    //     console.log(todo);
+    //     // the below line waas added after the above code
+    //     const newListItem=document.createElement("li");
+    //     newListItem.innerText=todo;
+    //     todosList.appendChild(newListItem);
+    //     console.log(newListItem);
         
-    }
+    // }
  });
 </script>
 </html>
