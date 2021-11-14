@@ -24,17 +24,34 @@
 <ul id="todos"></ul>
 </body> 
 <script>
-    const todos =[];
+//     const todos =[];
+//  document
+//  .getElementById("todoForm")
+//  .addEventListener("submit",function (event){
+//     event.preventDefault();
+//     const todoInput=document.getElementById("todoInput").value;
+//     todos.push(todoInput);
+//     console.log("Todos:",todos);
+    
+//  })
+
+// this was the first code
+//  home work 
+// createelement by id
+
+const todos =[];
  document
  .getElementById("todoForm")
  .addEventListener("submit",function (event){
     event.preventDefault();
     const todoInput=document.getElementById("todoInput").value;
     todos.push(todoInput);
-    console.log(todos);
-    
+    console.log("Todos:",todos);
+    for (let index = 0; index < todos.length; index++) {
+        const element = todos[index];
+        console.log(element);
+        
+    }
  })
-//  home work 
-// createelement by id
 </script>
 </html>
