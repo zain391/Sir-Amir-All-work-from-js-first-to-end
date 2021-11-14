@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js conditions practice</title>
+</head>
+<body>
+    <input type="number" placeholder="Enter a Temperature" id="temp">
+    <button onclick="suggestions()">Get Suggestions</button>
+    <h2 id="result"></h2>
+</body>
+<script>
+ function suggestions(){
+    let temp=parseInt(document.getElementById("temp").value);
+    let result=document.getElementById("result");
+    if(temp < 20){
+        result.innerText="please wear a jacket before going outside its below 20  outside";
+    }else if(temp >20 && temp <25){
+        result.innerText="please wear a t-shirt befor going outside its between 20 to 25 outside"
+    }else if(temp >25 && temp <31){
+        result.innerText="Please wear a normal t sirt its between 25 to 30 outside";
+    }else{
+        result.innerText="wear whatever you want to wear before going outside"
+    }
+
+ }
+</script>
+</html>
