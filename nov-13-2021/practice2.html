@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js practice</title>
+</head>
+<body>
+    <form id="todoForm">
+        <input type="text" id="todoInput">
+        <button type="submit">ADD</button>
+    </form>
+    <ul id="todos"></ul>
+</body>
+<!-- <script src="style.js"></script> -->
+<script>
+    const todos=[];
+    document
+    .getElementById("todoForm")
+    .addEventListener("submit",function (event){
+        event.preventDefault();
+        const todoInput=document.getElementById("todoInput").value;
+        todos.push(todoInput);
+        console.log(todos);
+        const todoList=document.getElementById("todos");
+        const newListItem=document.createElement("li");
+        newListItem.innerText=todoInput;
+        todoList.appendChild(newListItem);
+        console.log(newListItem);
+
+    });
+    
+</script>
+</html>

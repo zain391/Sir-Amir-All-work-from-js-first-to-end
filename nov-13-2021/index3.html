@@ -34,30 +34,9 @@
           todos = filteredArr;
           renderMyTodoList();
         };
-
         todosList.appendChild(newListItem);
         todosList.appendChild(deleteButton);
-        // for (let index = 0; index < todos.length; index++) {
-        //   const todo = todos[index];
-        //   const newListItem = document.createElement("li");
-        //   newListItem.innerText = todo;
-        //   todosList.appendChild(newListItem);
-        //   console.log(newListItem);
-        // }
       });
-    let a = 1;
-    // a = a + 1
-    // a += 1;
-    // a++;
-    // console.log("a: ", a);
-
-    //
-    //
-    //
-    // for (let a = 0; a < 10; a = a + 2) {
-    //   console.log("a: ", a);
-    // }
-
     function renderMyTodoList() {
       const todosList = document.getElementById("todos");
       todosList.innerHTML = "";
