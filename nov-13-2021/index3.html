@@ -32,7 +32,8 @@
             return todoInput !== arrElement;
           });
           todos = filteredArr;
-          renderMyTodoList();
+          console.log(todos);
+          renderMyTodoList(); 
         };
         todosList.appendChild(newListItem);
         todosList.appendChild(deleteButton);
@@ -42,6 +43,7 @@
       todosList.innerHTML = "";
       for (let index = 0; index < todos.length; index++) {
         const todoInput = todos[index];
+        console.log(todoInput);
         const newListItem = document.createElement("li");
         const deleteButton = document.createElement("button");
         newListItem.innerText = todoInput;
@@ -51,6 +53,7 @@
             return todoInput !== arrElement;
           });
           todos = filteredArr;
+          console.log(todos);
           renderMyTodoList();
         };
 

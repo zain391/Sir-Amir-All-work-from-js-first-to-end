@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05 js del button practic</title>
+</head>
+<body>
+    <form id="todoForm">
+        <input type="text" id="todoInput">
+        <button type="submit">ADD</button>
+    </form>
+    <ul id="todoUn"></ul>
+</body>
+<script>
+    const todoArr=[];
+    document
+    .getElementById("todoForm")
+    .addEventListener("submit",function(evet){
+        event.preventDefault();
+        const todoInput=document.getElementById("todoInput").value;
+         todoUn=document.getElementById("todoUn");
+        console.log(todoArr);
+        todoArr.push(todoInput);
+        console.log(todoArr);
+        const delArr=document.getElementById("todoInput").value="";
+        console.log(delArr);
+        const newListItem=document.createElement("li");
+        const deleteButton=document.createElement("button");
+        deleteButton.innerText="delete";
+        todoUn.appendChild(newListItem);
+        todoUn.appendChild(deleteButton);
+        newListItem.innerText =todoInput;
+        console.log(newListItem);
+        deleteButton.onclick= function(){
+            const filteredArr=todoArr.filter(function(arrElement){
+                return todoInput !== arrElement;
+                // console.log(todoInput);
+            })
+            console.log("i am a filltered array",filteredArr);
+        }
+    })
+</script>
+</html>
