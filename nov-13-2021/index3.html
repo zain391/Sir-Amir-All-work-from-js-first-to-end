@@ -28,7 +28,7 @@
         newListItem.innerText = todoInput;
         deleteButton.innerText = "delete";
         deleteButton.onclick = function () {
-          const filteredArr = todos.filter(function (arrElement) {
+          const filteredArr = todoArr.filter(function (arrElement) {
             return todoInput !== arrElement;
           });
           todos = filteredArr;
