@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6th practice</title>
+</head>
+<body>
+    <h1>nov 16 2021</h1>
+    <form id="todoForm">
+        <input type="text" id="todoInput">
+        <button type="submit">ADD</button>
+    </form>
+    <ul id="todoUnList"></ul>
+</body>
+<script>
+    let todoArr=[];
+    document
+    .getElementById("todoForm")
+    .addEventListener("submit",function(event){
+        event.preventDefault();
+        let todoInput=document.getElementById("todoInput").value;
+        todoArr.push(todoInput);
+        console.log("i am bfore the filter",todoArr);
+        const todoListItem=document.createElement("li");
+        todoListItem.innerHTML=todoInput;
+        const deleteButton=document.createElement("button");
+        let todoUnList=document.getElementById("todoUnList");
+        deleteButton.innerText="delete";
+        todoUnList.appendChild(todoListItem);
+        todoUnList.appendChild(deleteButton);
+        let newArrList=todoArr.filter(function (arrElement){
+            return todoInput !== arrElement; 
+            
+        })
+        todoArr=newArrList;
+        console.log("i am  after",todoArr);
+
+    })
+</script>
+</html>
