@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>code practice 02</title>
+</head>
+<body>
+    <form id="todoForm">
+        <input type="text" id="todoInput">
+        <button type="submit">ADD</button>
+    </form>
+    <!-- <button onclick="renderMyTodoList()">hello</button> -->
+
+    <ul id="todoUnList"></ul>
+</body>
+<script>
+    const todosArr=[];
+    document
+    .getElementById("todoForm")
+    .addEventListener("submit",function(event){
+        event.preventDefault();
+        const todoInput=document.getElementById("todoInput").value;
+        console.log(todoInput);
+        const todoUnList=document.getElementById("todoUnList");
+        todosArr.push(todoInput);
+        const newListItem=document.createElement("li");
+        const deleteButton=document.createElement("button");
+        newListItem.innerText=todoInput;
+        console.log(newListItem);
+        deleteButton.innerText="delete";
+        console.log(deleteButton);
+        console.log("i am an array before filtration",todosArr);
+        deleteButton.onclick=function(){
+            const filteredArr=todosArr.filter(function(arrElement){
+                return todoInput !==arrElement; 
+            });
+            todosArr=filteredArr;
+            // console.log("i am array after filter",todosArr);
+        };
+        todoUnList.appendChild(newListItem);
+        todoUnList.appendChild(deleteButton);
+        renderMyTodoList();
+
+        });
+        function renderMyTodoList(){
+            // ul tag getting
+            const todoUnList=document.getElementById("todoUnList");
+            todoUnList.innerHTML="";
+            for (let index = 0; index < todoUnList.length; index++) {
+                const todoInput = todoUnList[index];
+                const newListItem=document.createElement("li");
+                const deleteButton=document.createElement("button");
+                newListItem.innerText=todoInput;
+                console.log(todoInput);
+                deleteButton.innerText="delete";
+                deleteButton.onclick=function(){
+                    const filteredArr= todosArr.filter(function(arrElement){
+                        return todoInput !== arrElement;
+                    });
+                    todosArr=filteredArr;
+                    renderMyTodoList();
+                };
+                        todoUnList.appendChild(newListItem);
+                        todoUnList.appendChild(deleteButton);
+            }
+        }
+        // renderMyTodoList();
+
+</script>
+</html>
