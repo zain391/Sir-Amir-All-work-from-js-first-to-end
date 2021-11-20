@@ -18,7 +18,7 @@
         in console, </p>
 
 </body>
-<script>
+<!-- <script>
     const arr=['a','b','c','d'];
     const obj={
         first:'a',
@@ -42,5 +42,26 @@
     for (const element of "1223432"){
         console.log(element);
     }
+</script> -->
+<script>
+    localStorage.setItem('name',"zain")
+    localStorage.setItem('age',23,);
+    console.log(localStorage.getItem("name"));
+    console.log(localStorage.removeItem("age"));
+    localStorage.clear();
+    // converting array and obj into string
+    const myInfo={
+        name:"zain Qamer",
+        age:20,
+    };
+    // json.stringify(myInfo);
+    const stringifyObj=JSON.stringify(myInfo);
+    // debugger acts like kind of break point
+    // debugger
+    // localStorage.setItem("myinfo",myInfo);
+    // the upper line still got the origional const 53
+    localStorage.setItem("myinfo",stringifyObj);
+
+
 </script>
 </html>
