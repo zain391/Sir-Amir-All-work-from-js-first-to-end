@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO LIST</title>
+</head>
+<body>
+    <div>
+        <input type="text" id="todoInput">
+        <button id="AddTodButton" onclick="addTodo()">ADD</button>
+    </div>
+    <div>
+        <ul id="todoList"></ul>
+    </div>
+</body>
+<script>
+    function addTodo(){
+        let todoList=document.getElementById("todoList");
+        let todoInput=document.getElementById("todoInput").value;
+        console.log(todoInput);
+        let AddTodButton=document.getElementById("AddToButton");
+        let listItem=document.createElement("li");
+        listItem.innerHTML=todoInput;
+        todoList.appendChild(listItem);
+        let delButton=document.createElement("button");
+        delButton.setAttribute("onclick","deleteButtonFun(this)");
+        delButton.innerText="delete";
+        listItem.appendChild(delButton);
+
+        
+    }
+    function deleteButtonFun(e){
+        console.log("this is a del button function");
+        console.log(e);
+    }
+</script>
+</html>
