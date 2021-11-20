@@ -21,12 +21,18 @@
     };
     console.log(obj);
     console.log("for in --------------------");
+    // it is mostly used for key reading
     for(const key in obj){
         console.log(key);
         console.log(obj[key]);
     }
     console.log("for of-------------------");
     for (const element of arr){
+        console.log(element);
+    }
+
+    // we can also give it a string
+    for (const element of "1223432"){
         console.log(element);
     }
 </script>
