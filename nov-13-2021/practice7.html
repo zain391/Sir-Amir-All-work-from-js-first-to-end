@@ -10,6 +10,7 @@
     <div>
         <input type="text" id="todoInput">
         <button id="AddTodButton" onclick="addTodo()">ADD</button>
+        <button onclick="deleteAll()">Delete All</button>
     </div>
     <div>
         <ul id="todoList"></ul>
@@ -21,19 +22,39 @@
         let todoInput=document.getElementById("todoInput").value;
         console.log(todoInput);
         let AddTodButton=document.getElementById("AddToButton");
+        let delButton=document.createElement("button");
+        delButton.innerText="delete";
+        delButton.setAttribute("onclick","deleteButtonFun(this)");
+        let updateButton=document.createElement("button");
+        updateButton.setAttribute("onclick","edit(this)")
+        updateButton.innerText="edit";
         let listItem=document.createElement("li");
         listItem.innerHTML=todoInput;
-        todoList.appendChild(listItem);
-        let delButton=document.createElement("button");
-        delButton.setAttribute("onclick","deleteButtonFun(this)");
-        delButton.innerText="delete";
         listItem.appendChild(delButton);
+        listItem.appendChild(updateButton);
+        todoList.appendChild(listItem);
+        todoInput=document.getElementById("todoInput").value="";
 
         
     }
     function deleteButtonFun(e){
         console.log("this is a del button function");
+        console.log(e.parentNode);
+        e.parentNode.remove();
+    }
+    function deleteAll(){
+        todoList.innerHTML="";
+    }
+    function edit(e){
+        // console.log("this is an edit button");
         console.log(e);
+        // console.log(e.parentNode);
+        // console.log(e.parentNode.firstChild);
+        // let editvalue=e.parentNode.firstChild.nodeValue; 
+        // console.log(e.parentNode.childNodes[0]);
+        let val=e.parentNode.firstChild.nodeValue;
+        let propm=prompt("enter the updated value", val);
+        e.parentNode.firstChild.nodeValue= propm;
     }
 </script>
 </html>

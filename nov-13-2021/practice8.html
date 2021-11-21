@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="text" id="todoInput">
+        <button id="addButton"onclick="addTodo()">ADD</button>
+        <button id="AllDelButton" onclick="AllDelButton()">Delete</button>
+    </div>
+    <div>
+        <ul id="todoUnList"></ul>
+    </div> 
+</body>
+<script>
+    function addTodo(){
+        let todoInput=document.getElementById("todoInput").value;
+        console.log(todoInput);
+        let todoUnList=document.getElementById("todoUnList");
+        let listItem=document.createElement("li");
+        listItem.innerHTML=todoInput;
+        let delButton=document.createElement("button");
+        delButton.setAttribute("onclick","delButtonFun(this)")
+        delButton.innerText="delete";
+        let editButton=document.createElement("button");
+        editButton.setAttribute("onclick","editButtonFun(this)")
+        editButton.innerHTML="Edit";
+        listItem.appendChild(delButton);
+        listItem.appendChild(editButton);
+        todoUnList.appendChild(listItem);
+        document.getElementById("todoInput").value="";
+
+    };
+    function delButtonFun(e){
+        e.parentNode.remove();
+    };
+    function AllDelButton(){
+        todoUnList.innerHTML="";
+    };
+    function editButtonFun(e){
+       let val=e.parentNode.firstChild.nodeVs
+
+    //    let val=e.parentNode.firstChild.nodeValue;
+    //     let propm=prompt("enter the updated value", val);
+    //     e.parentNode.firstChild.nodeValue= propm;
+    }
+</script>
+</html>
