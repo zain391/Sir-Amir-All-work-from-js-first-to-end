@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo list</title>
+</head>
+<body>
+    <div>
+        <input id="todoInput">
+            <button onclick="addTodo()">ADD</button>
+            <button onclick="deleteAll()">Delete ALL</button>
+        </input>
+    </div>
+    <div>
+        <ul id="todoUnList"></ul>
+    </div>
+</body>
+<script>
+    function addTodo() {
+        let todoInput=document.getElementById("todoInput").value;
+        let todoUnList=document.getElementById("todoUnList");
+        let listItem=document.createElement("li");
+        listItem.innerHTML=todoInput;
+        let delButton=document.createElement("button");
+        delButton.innerText="delete";
+        delButton.setAttribute("onclick","delButtonFun(this)")
+        let editButton=document.createElement("button");
+        editButton.innerText="Edit";
+        editButton.setAttribute("onclick","editButtonFun(this)")
+        listItem.appendChild(delButton);
+        listItem.appendChild(editButton);
+        todoUnList.appendChild(listItem);
+        document.getElementById("todoInput").value="";
+    }
+    function delButtonFun(e) {
+        e.parentNode.remove();
+    }
+    function deleteAll() {
+        todoUnList.innerHTML="";
+    }
+    function editButtonFun(e) {
+        let val=e.parentNode.firstChild.nodeValue;
+        let promp=prompt("enter the udated text",val);
+        e.parentNode.firstChild.nodeValue=promp;
+    }
+</script>
+</html>
