@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todo List</title>
+</head>
+<body>
+    <form id="todoForm">
+        <input type="text" id="todoInput">
+        <button onclick="" type="submit">ADD</button>
+    </form>
+    <ul id="todoUnList"></ul>
+</body>
+<script>
+    let todoArr=[];
+    document
+    .getElementById("todoForm")
+    .addEventListener("submit", function (event){
+        event.preventDefault();
+        let todoInput=document.getElementById("todoInput").value;
+        let todoUnList=document.getElementById("todoUnList");
+        todoArr.push(todoInput);
+        console.log("before filtter",todoArr);
+        let listItem=document.createElement("li");
+        let delButton=document.createElement("button");
+        delButton.innerText="delete";
+        let editButton=document.createElement("button");
+        editButton.innerText="Edit";
+        listItem.innerHTML=todoInput;
+        delButton.onclick=function(){
+            const filterArr=todoArr.filter(function(arrElement){
+                return todoInput !== arrElement;
+            });
+          todoArr = filterArr;
+          console.log("after filter",todoArr);
+        }
+        listItem.appendChild(delButton);
+        listItem.appendChild(editButton);
+        todoUnList.appendChild(listItem);
+        document.getElementById("todoInput").value="";
+    });
+</script>
+</html>
