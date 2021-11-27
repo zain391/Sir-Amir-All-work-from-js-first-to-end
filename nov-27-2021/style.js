@@ -55,17 +55,24 @@
 // console.log(mySecObj);
 
 // other  case
-const myObj={
-    a:1,
-    b:2,
-}
+// const myObj={
+//     a:1,
+//     b:2,
+// }
 
-const mySecObj={
-    b:34,
-    ...myObj,
-}
-console.log(myObj);
-console.log(mySecObj);
+// const mySecObj={
+//     b:34,
+//     ...myObj,
+// }
+// console.log(myObj);
+// console.log(mySecObj);
+
+
+
+// ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// pass by value 
+// pass by Reference
+
 
 
 
