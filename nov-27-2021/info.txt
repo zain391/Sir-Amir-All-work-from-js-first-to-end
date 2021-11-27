@@ -1,0 +1,2 @@
+we willlearn about the VE6 of JAva script
+default value of parameters of function
