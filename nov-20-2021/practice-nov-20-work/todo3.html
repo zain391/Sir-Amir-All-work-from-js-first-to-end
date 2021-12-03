@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO LIST</title>
+</head>
+<body>
+    <h1>Enter the task to do</h1>
+    <form id="todoForm">
+        <input type="text" id="todoInput">
+        <button type="submit">ADD</button>
+    </form>
+    <ul id="todoUnList"></ul>
+</body>
+<script>
+    let todoArr=[];
+    document
+    .getElementById("todoForm")
+    .addEventListener("submit",function(event){
+        event.preventDefault();
+        let todoInput=document.getElementById("todoInput").value;
+        let todoUnList=document.getElementById("todoUnList");
+        todoArr.push(todoInput);
+        let newListItem=document.createElement("li");
+        newListItem.innerHTML=todoInput;
+        let deleteButton=document.createElement("button");
+        deleteButton.innerText="Delete";
+        let editButton=document.createElement("button");
+        editButton.innerText="Edit";
+        console.log("Before filter",todoArr);
+      
+        deleteButton.onclick=function(){
+            const filteredArr=todoArr.filter(function(arrElement){
+                return todoInput !== arrElement;
+            });
+            todoArr=filteredArr;
+            console.log("after filter",todoArr);
+        };
+        todoUnList.appendChild(newListItem);
+        newListItem.appendChild(deleteButton);
+        newListItem.appendChild(editButton);
+        // document.getElementById("todoInput").value="";
+        // renderMyTodoList();
+    });
+    // 1st ;
+    function renderMyTodoList(){
+        let todoUnList=document.getElementById("todoUnList");
+        todoUnList.innerHTML="";
+        // console.log("dsafjl",todoArr);
+        for (let index = 0; index < todoArr.length; index++) {
+            const todoInput = todoArr[index];
+            console.log([todoInput]);
+        }
+        // console.log("i am a render function",[todoInput]);
+    }
+    // renderMyTodoList();
+</script>
+</html>

@@ -58,10 +58,17 @@
           todos = filteredArr;
           renderMyTodoList();
         };
-
+        // todoInput for input tag
+        // todoForm for form tag
+        // todoSubmitButton for ADD button
+        // updateButton for update button
+        // todos for Unorder list tag
+        // todos  array var name
         updateButton.onclick = function () {
           const inputElement = document.getElementById("todoInput");
+      // <button type="submit" id="todoSubmitButton">Add</button>
           const submitButton = document.getElementById("todoSubmitButton");
+          // <button type="button" id="updateButton" style="display: none"> Update</button>
           const todoUpdateButton = document.getElementById("updateButton");
 
           todoUpdateButton.onclick = function () {
