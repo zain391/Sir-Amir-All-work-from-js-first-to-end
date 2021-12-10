@@ -7,6 +7,7 @@ let todoList = document.getElementById('todoList')
 button.addEventListener("click", function addFunction() {
     let value = input.value.trim()
     if(!value) return
+    console.log("i am a",value);
     let obj = {
         item: value,
         // id: Math.random() * 20000
@@ -15,7 +16,7 @@ button.addEventListener("click", function addFunction() {
     
     showTodo()
     delAll()
-    input.value = ""
+    // input.value = ""
 });
 
 deleteBtn.addEventListener("click", function () {
