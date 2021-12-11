@@ -8,24 +8,23 @@
 </head>
 <body>
     <script>
-        console.log(1);
-        
-        setTimeout(()=>{
-            console.log(23423);
-        } , 6000);
-        // no matter if we give 6000 or 0 this will execute at the last there will be no effect on the results
-        // browser execute the asynchrounus at anohter processor
-        console.log(3);
-        console.log(4);
-        // understanding the setTimeout
+   
+// const promise1=new Promise((resolve,reject)=>{
 
-        // now we will again learn about the promisises in js 
-        // sir umer Ahmed also discuused the promoses last week
-        // promise is also browser api like settimeout
-        // these apis are handeled by browser
+// });
+// this was the first code
+// resolve and reject are basically two functions that we have to call inside the promise
+// if there is no resolve or reject working then the function is in infinte state or pendding state
+// or we can say this will be the ifinite wait
 
-
-
+const promise1=new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+        resolve();
+    } ,8000);
+});
+promise1.then(function(){
+    console.log("funstion is resolved");
+})
     </script>
 </body>
 </html>
