@@ -1,0 +1,18 @@
+process and threads 
+logical processor is also known as threads.
+
+there is differnce between the cores and threads in dual and hexa core
+ipc 
+inter process communication
+
+there are some units in processor that execute the task.
+
+
+there are also two types of language 
+singal threaded and multi threaded languages
+
+
+
+there is setTimeout function 
+setTimeout(()=> log(1), 5000);
+the 5000 means 5 sec as the value is in mili sec
