@@ -28,14 +28,14 @@
 const promise1=new Promise((resolve,reject)=>{
     setTimeout(()=>{
         resolve();
-        // reject();
+        reject();
     },8000);
 
 
-promise1
-.then(function(){
+promise1.then(function(){
     console.log("funstion is resolved");
-});
-.catch(function(){
-    console.log("funstion is rejected");
-});
+})
+
+
+// there is also a fetch api 
+// await keyword in promis and fetch api
