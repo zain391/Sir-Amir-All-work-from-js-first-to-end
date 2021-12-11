@@ -19,3 +19,11 @@ the 5000 means 5 sec as the value is in mili sec
 
 THE setTimeout does not exit in JAVASCRIPT but we still use it how is that possible
 these are browsers API(Browser ApI provide u extra functionality to do multi thread  operations)
+
+Developer tools course from youtube
+
+now we are moving to another tern sysnchronus and asynchrounus process
+
+
+call stack also another term we will learn about 
+processor execute instruction in a manner (callstack is the basic thing that performs this task for processor)
