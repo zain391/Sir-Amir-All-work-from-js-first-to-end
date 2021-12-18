@@ -1,0 +1,7 @@
+learned about the Window object and this  object difference in arrow function
+and normal function
+DNS ANd IP 
+Stack (first in last out)
+Browser object model BOM at w3School
+kodashi operating system is newly launched os that is considered to be the most secure os
+js web API 
