@@ -7,15 +7,15 @@ let todoList = document.getElementById('todoList')
 button.addEventListener("click", function addFunction() {
     let value = input.value.trim()
     if(!value) return
-    console.log("i am a",value);
+    // console.log("i am a",value);
     let obj = {
         item: value,
         // id: Math.random() * 20000
     }
     todoArray.unshift(obj)
-    
+    // console.log(todoArray);
     showTodo()
-    delAll()
+    // delAll()
     // input.value = ""
 });
 
@@ -43,6 +43,8 @@ const UpdateItem = (e) => {
 
 const showTodo = () => {
     todoArray.map((doc, index) => {
+        console.log("doc",doc);
+        console.log("index",index);
         let newLi = document.createElement('li');
         let delBtn = document.createElement("button");
         let UpdateBtn = document.createElement("button");
@@ -50,9 +52,10 @@ const showTodo = () => {
         UpdateBtn.setAttribute("onclick", `UpdateItem(this)`)
         UpdateBtn.innerHTML = "Update";
         delBtn.innerHTML = "Delete";
-        newLi.innerText = doc.item
-        // delBtn.addEventListener("click", function (this) {
-        //     delItem(e, doc.id)
+        newLi.innerText = doc.item;
+        console.log("i am the doc.item",doc.item);
+        // delBtn.addEventListener("click", function(e) {
+        //     console.log(e);
         // })
         todoList.appendChild(newLi)
         newLi.appendChild(delBtn)

@@ -29,9 +29,7 @@ const promise1=new Promise((resolve,reject)=>{
     setTimeout(()=>{
         resolve();
         reject();
-    },8000);
-
-
+    },8000)
 promise1.then(function(){
     console.log("funstion is resolved");
 })
